@@ -7,7 +7,7 @@ set -e
 echo -n "لطفاً رمز احراز هویت را وارد کنید (در صورت Enter زدن، به‌طور خودکار تولید می‌شود): "
 read input_secret
 if [ -z "$input_secret" ]; then
-    AUTH_SECRET="SNI_$(cat/dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)"
+    AUTH_SECRET="SNI_$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)"
 else
     AUTH_SECRET="$input_secret"
 fi
